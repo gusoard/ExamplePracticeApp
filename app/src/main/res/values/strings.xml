@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Example Practice App</string>
+    <string name="enter_info">Enter Something</string>
+    <string name="save">Save</string>
+    <string name="txtBotonSharedPrefsExample">Shared Preferences Example</string>
+    <string name="enter_chore">Enter a chore</string>
+    <string name="assign_to">Assigned to…</string>
+    <string name="assignedBy">Assigned by…</string>
+    <string name="txtBotonChoresDatabaseExample" >Chores Database Example</string>
+</resources>
