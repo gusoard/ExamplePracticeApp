@@ -6,5 +6,5 @@
   Combinación de varias actividades, con algunas modificaciones a modo de prueba, agrupadas en una
    sola aplicaciónn.
  
-   El propósito de ésta aplicación es exclusivo para pruebas y educación
+   El propósito de esta aplicación es exclusivo para pruebas y educación
  
