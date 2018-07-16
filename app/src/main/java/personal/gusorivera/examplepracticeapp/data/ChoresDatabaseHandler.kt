@@ -17,6 +17,7 @@ import personal.gusorivera.examplepracticeapp.model.*
  */
 class ChoresDatabaseHandler(context: Context) :
         SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+    val TAG_CHORES_DATABASE_HANDLER = "Chores Database Handler"
     override fun onCreate(db: SQLiteDatabase?) {
 
         var CREATE_CHORE_TABLE = "CREATE TABLE $TABLE_NAME ($KEY_ID INTEGER PRIMARY KEY, " +
@@ -89,4 +90,62 @@ class ChoresDatabaseHandler(context: Context) :
         return chore
     }
 
+    fun readChores(): ArrayList<Chore>{
+        var db: SQLiteDatabase = readableDatabase
+        var list: ArrayList<Chore> = ArrayList()
+
+        var selectAllCommand = "SELECT * FROM $TABLE_NAME"
+
+        var cursor: Cursor = db.rawQuery(selectAllCommand, null)
+
+        // loop through the chores
+        if (cursor.moveToFirst()){
+            var chore: Chore
+            do {
+                chore = Chore()
+                chore.id = cursor.getInt(cursor.getColumnIndex(KEY_ID))
+                chore.choreName = cursor.getString(cursor.getColumnIndex(KEY_CHORE_NAME))
+                chore.assignedBy = cursor.getString(cursor.getColumnIndex(KEY_CHORE_ASSIGNEDBY))
+                chore.assignedTo = cursor.getString(cursor.getColumnIndex(KEY_CHORE_ASSIGNEDTO))
+                chore.timeAssigned = cursor.getLong(cursor.getColumnIndex(KEY_CHORE_ASSIGNED_TIME))
+                list.add(chore)
+            }while (cursor.moveToNext())
+        }
+
+        return list
+    }
+
+    fun updateChore(chore: Chore): Int{
+        val db: SQLiteDatabase = writableDatabase
+        val values = ContentValues()
+        var result = 0
+       try {
+           values.put(KEY_CHORE_NAME, chore.choreName)
+           values.put(KEY_CHORE_ASSIGNEDBY, chore.assignedBy)
+           values.put(KEY_CHORE_ASSIGNEDTO, chore.assignedTo)
+           values.put(KEY_CHORE_ASSIGNED_TIME, System.currentTimeMillis())
+
+           result = db.update(TABLE_NAME, values, "$KEY_ID = ?", arrayOf(chore.id.toString()))
+       }catch (e:Exception){
+           Log.d(TAG_CHORES_DATABASE_HANDLER, e.message)
+       }finally {
+           db.close()
+       }
+        return result
+    }
+
+    fun deleteChore(chore: Chore){
+        val db: SQLiteDatabase = writableDatabase
+        db.delete(TABLE_NAME, "$KEY_ID = ?", arrayOf(chore.id.toString()))
+        db.close()
+    }
+
+    fun getChorusCount(): Int {
+        val db: SQLiteDatabase = writableDatabase
+        val countQuery = "SELECT * FROM $TABLE_NAME"
+        val cursor: Cursor = db.rawQuery(countQuery,null)
+        val count = cursor.count
+        cursor.close()
+        return count
+    }
 }
