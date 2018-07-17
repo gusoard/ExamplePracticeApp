@@ -19,7 +19,10 @@
         <activity android:name=".RecycleViewExample" />
         <activity android:name=".SimpleListViewExample" />
         <activity android:name=".SharedPrefsExample" />
-        <activity android:name=".ChoresExample"></activity>
+        <activity android:name=".ChoresExample" />
+        <activity android:name=".ui.ChoresList" />
+        <activity android:name=".ui.ChoresListExample" />
+        <activity android:name=".ChoresList"></activity>
     </application>
 
 </manifest>

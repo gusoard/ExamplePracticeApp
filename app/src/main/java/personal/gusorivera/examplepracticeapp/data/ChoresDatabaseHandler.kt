@@ -10,7 +10,6 @@ import android.widget.Toast
 import personal.gusorivera.examplepracticeapp.model.*
 
 /**
- *
  * Hace referencia al ejemplo de ChoresExample
  *
  * La sección de FACTORY es para un custom Cursor para las querys
@@ -42,9 +41,9 @@ class ChoresDatabaseHandler(context: Context) :
      * CRUD - Create, Read, Update, Delete
      */
 
-    fun createChore(chore: Chore){
+    fun createChore(chore: Chore):Long{
         var db: SQLiteDatabase = writableDatabase
-
+        var insertOk:Long = -1
         // keyValuePair
         var values = ContentValues()
 
@@ -54,13 +53,14 @@ class ChoresDatabaseHandler(context: Context) :
           values.put(KEY_CHORE_ASSIGNEDTO, chore.assignedTo)
           values.put(KEY_CHORE_ASSIGNED_TIME, System.currentTimeMillis())
 
-          db.insert(TABLE_NAME, null, values)
+          insertOk = db.insert(TABLE_NAME, null, values)
           Log.d("DATA INSERTED", "SUCCESS")
       }catch (e:Exception){
           Log.d("DATA INSERTED", "FAILED")
       }finally {
           db.close()
       }
+        return insertOk
     }
 
     fun readAChore(id: Int) : Chore?{
