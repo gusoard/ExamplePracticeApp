@@ -2,23 +2,20 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@android:color/darker_gray"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -27,15 +24,15 @@
 
             <ImageView
                 android:id="@+id/picView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
+                android:layout_width="59dp"
+                android:layout_height="60dp"
+                android:padding="5dp"
                 app:srcCompat="@mipmap/ic_launcher" />
 
 
             <TextView
                 android:id="@+id/name"
-                android:layout_width="match_parent"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/picView"
                 android:text="Textview"
@@ -44,11 +41,28 @@
 
             <TextView
                 android:id="@+id/age"
-                android:layout_width="match_parent"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/age2"
+                android:layout_toEndOf="@+id/picView"
+                android:text="Age" />
+
+            <TextView
+                android:id="@+id/age2"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/name"
                 android:layout_toRightOf="@id/picView"
                 android:text="Age" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/picView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="18dp"
+                android:text="TextView" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

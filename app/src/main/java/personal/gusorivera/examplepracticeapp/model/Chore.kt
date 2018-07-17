@@ -1,5 +1,8 @@
 package personal.gusorivera.examplepracticeapp.model
 
+import java.text.DateFormat
+import java.util.*
+
 /**
  * Hace referencia al ejemplo de ChoresExample
  */
@@ -17,5 +20,14 @@ class Chore() {
         this.assignedTo = assignedTo
         this.timeAssigned = timeAssigned
         this.id = id
+    }
+
+    fun showHumanDate(timeAssigned: Long): String {
+
+        var dateFormat: java.text.DateFormat = DateFormat.getDateInstance()
+        var formattedDate: String = dateFormat.format(Date(timeAssigned).time)
+
+        return "Created: ${formattedDate}"
+
     }
 }

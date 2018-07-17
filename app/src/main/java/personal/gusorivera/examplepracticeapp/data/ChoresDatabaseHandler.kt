@@ -35,6 +35,7 @@ class ChoresDatabaseHandler(context: Context) :
         db?.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
         // create table again
         onCreate(db)
+        db!!.close()
     }
 
     /**
@@ -87,6 +88,7 @@ class ChoresDatabaseHandler(context: Context) :
             chore.timeAssigned = cursor.getLong(cursor.getColumnIndex(KEY_CHORE_ASSIGNED_TIME))
         }
         cursor.close()
+        db.close()
         return chore
     }
 
@@ -146,6 +148,7 @@ class ChoresDatabaseHandler(context: Context) :
         val cursor: Cursor = db.rawQuery(countQuery,null)
         val count = cursor.count
         cursor.close()
+        db.close()
         return count
     }
 }

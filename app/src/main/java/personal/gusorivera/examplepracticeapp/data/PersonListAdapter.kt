@@ -17,7 +17,8 @@ import personal.gusorivera.examplepracticeapp.model.Person
  *  Context in which it will be created. So it knows how to connect to other components
  *  VH -> View Holder only creates rows that are being viewed. What the user can see
  */
-class PersonListAdapter(private val list:ArrayList<Person>, private val context: Context) : RecyclerView.Adapter<PersonListAdapter.ViewHolder>(){
+class PersonListAdapter(private val list:ArrayList<Person>, private val context: Context) :
+        RecyclerView.Adapter<PersonListAdapter.ViewHolder>(){
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
         fun bindItem(person:Person){
