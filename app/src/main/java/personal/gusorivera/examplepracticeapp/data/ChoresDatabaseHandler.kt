@@ -53,11 +53,15 @@ class ChoresDatabaseHandler(context: Context) :
           values.put(KEY_CHORE_ASSIGNEDBY, chore.assignedBy)
           values.put(KEY_CHORE_ASSIGNEDTO, chore.assignedTo)
           values.put(KEY_CHORE_ASSIGNED_TIME, System.currentTimeMillis())
-
           insertOk = db.insert(TABLE_NAME, null, values)
-          Log.d("DATA INSERTED", "SUCCESS")
+          if (insertOk >= -1){
+              chore.timeAssigned = System.currentTimeMillis()
+              Log.d("DATA INSERTED", "SUCCESS")
+          }else{
+              Log.d("DATA INSERTED", "FAILED")
+          }
       }catch (e:Exception){
-          Log.d("DATA INSERTED", "FAILED")
+          Log.d("DATA INSERTED", "EXCEPTION")
       }finally {
           db.close()
       }
@@ -81,7 +85,7 @@ class ChoresDatabaseHandler(context: Context) :
         // MoveToFirst will return false if the cursor is empty
         if (!cursor.isClosed && cursor.moveToFirst()){
             chore = Chore()
-            chore.id = cursor.getInt(cursor.getColumnIndex(KEY_ID))
+            chore.id = cursor.getLong(cursor.getColumnIndex(KEY_ID))
             chore.choreName = cursor.getString(cursor.getColumnIndex(KEY_CHORE_NAME))
             chore.assignedBy = cursor.getString(cursor.getColumnIndex(KEY_CHORE_ASSIGNEDBY))
             chore.assignedTo = cursor.getString(cursor.getColumnIndex(KEY_CHORE_ASSIGNEDTO))
@@ -105,7 +109,7 @@ class ChoresDatabaseHandler(context: Context) :
             var chore: Chore
             do {
                 chore = Chore()
-                chore.id = cursor.getInt(cursor.getColumnIndex(KEY_ID))
+                chore.id = cursor.getLong(cursor.getColumnIndex(KEY_ID))
                 chore.choreName = cursor.getString(cursor.getColumnIndex(KEY_CHORE_NAME))
                 chore.assignedBy = cursor.getString(cursor.getColumnIndex(KEY_CHORE_ASSIGNEDBY))
                 chore.assignedTo = cursor.getString(cursor.getColumnIndex(KEY_CHORE_ASSIGNEDTO))
@@ -136,10 +140,11 @@ class ChoresDatabaseHandler(context: Context) :
         return result
     }
 
-    fun deleteChore(chore: Chore){
+    fun deleteChore(chore: Chore) : Int {
         val db: SQLiteDatabase = writableDatabase
-        db.delete(TABLE_NAME, "$KEY_ID = ?", arrayOf(chore.id.toString()))
+        var resultado: Int = db.delete(TABLE_NAME, "$KEY_ID = ?", arrayOf(chore.id.toString()))
         db.close()
+        return resultado
     }
 
     fun getChorusCount(): Int {

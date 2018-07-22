@@ -4,6 +4,9 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_chores_example.*
@@ -43,9 +46,9 @@ class ChoresExample : AppCompatActivity() {
                         newChore.assignedTo = assignToId.text.toString()
                         newChore.assignedBy = assignById.text.toString()
 
-                        newChore.id = dbHandler!!.createChore(newChore).toInt()
+                        newChore.id = dbHandler!!.createChore(newChore)
                         Thread.sleep(2000)
-                        if (newChore.id != -1){
+                        if (newChore.id >= -1L){
                             startActivity(Intent(this,  ChoresList::class.java))
                             finish()
 
@@ -68,6 +71,7 @@ class ChoresExample : AppCompatActivity() {
             startActivity(Intent(this,  ChoresList::class.java))
             finish()
         }
-
     }
+
+
 }

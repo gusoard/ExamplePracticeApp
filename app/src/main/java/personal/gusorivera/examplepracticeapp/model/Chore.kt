@@ -12,9 +12,9 @@ class Chore() {
     var assignedBy: String? = null
     var assignedTo: String? = null
     var timeAssigned: Long? = null
-    var id: Int? = null
+    var id: Long = -1
 
-    constructor(choreName: String, assignedBy: String, assignedTo: String, timeAssigned: Long, id:Int): this() {
+    constructor(choreName: String, assignedBy: String, assignedTo: String, timeAssigned: Long, id:Long): this() {
         this.choreName = choreName
         this.assignedBy = assignedBy
         this.assignedTo = assignedTo

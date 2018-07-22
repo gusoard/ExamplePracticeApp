@@ -7,4 +7,5 @@
     <string name="assign_to">Assigned to…</string>
     <string name="assignedBy">Assigned by…</string>
     <string name="txtBotonChoresDatabaseExample">Chores Database Example</string>
+    <string name="menu_title_add_chore">Add Chore</string>
 </resources>
