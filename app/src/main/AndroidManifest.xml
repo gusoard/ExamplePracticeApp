@@ -16,13 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecycleViewExample" />
+        <activity android:name=".RecyclerViewExample.RecycleViewExample" />
         <activity android:name=".SimpleListViewExample" />
         <activity android:name=".SharedPrefsExample" />
-        <activity android:name=".ChoresExample" />
+        <activity android:name=".ChoreExample.ChoresExample" />
         <activity android:name=".ui.ChoresList" />
         <activity android:name=".ui.ChoresListExample" />
-        <activity android:name=".ChoresList"></activity>
+        <activity android:name=".ChoreExample.ChoresList"></activity>
     </application>
 
 </manifest>

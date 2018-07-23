@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.model
+package personal.gusorivera.examplepracticeapp.ChoreExample.model
 
 import java.text.DateFormat
 import java.util.*

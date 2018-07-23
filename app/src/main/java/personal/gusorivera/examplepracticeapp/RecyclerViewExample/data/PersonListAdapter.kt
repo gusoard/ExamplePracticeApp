@@ -1,8 +1,6 @@
-package personal.gusorivera.examplepracticeapp.data
+package personal.gusorivera.examplepracticeapp.RecyclerViewExample.data
 
-import android.app.Activity
 import android.content.Context
-import android.preference.PreferenceManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import personal.gusorivera.examplepracticeapp.R
-import personal.gusorivera.examplepracticeapp.model.Person
+import personal.gusorivera.examplepracticeapp.RecyclerViewExample.model.Person
 
 /**
  *  list -> The data to be displayed
@@ -21,7 +19,7 @@ class PersonListAdapter(private val list:ArrayList<Person>, private val context:
         RecyclerView.Adapter<PersonListAdapter.ViewHolder>(){
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        fun bindItem(person:Person){
+        fun bindItem(person: Person){
             var name: TextView = itemView.findViewById(R.id.name) as TextView
             var age: TextView = itemView.findViewById(R.id.age) as TextView
 

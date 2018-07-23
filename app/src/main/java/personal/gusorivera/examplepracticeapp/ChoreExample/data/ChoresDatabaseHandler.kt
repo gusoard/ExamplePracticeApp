@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.data
+package personal.gusorivera.examplepracticeapp.ChoreExample.data
 
 import android.content.ContentValues
 import android.content.Context
@@ -6,8 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
-import android.widget.Toast
-import personal.gusorivera.examplepracticeapp.model.*
+import personal.gusorivera.examplepracticeapp.ChoreExample.model.*
 
 /**
  * Hace referencia al ejemplo de ChoresExample
@@ -72,7 +71,7 @@ class ChoresDatabaseHandler(context: Context) :
         var db:SQLiteDatabase = readableDatabase
         var chore: Chore? = null
         var cursor: Cursor = db.query(
-                                TABLE_NAME,
+                TABLE_NAME,
                                 arrayOf(KEY_ID,
                                         KEY_CHORE_NAME,
                                         KEY_CHORE_ASSIGNEDBY,

@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.data
+package personal.gusorivera.examplepracticeapp.ChoreExample.data
 
 import android.content.Context
 import android.graphics.Color
@@ -13,15 +13,14 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.popup_chore.view.*
 import personal.gusorivera.examplepracticeapp.R
-import personal.gusorivera.examplepracticeapp.R.id.choresRecyclerView
-import personal.gusorivera.examplepracticeapp.model.Chore
+import personal.gusorivera.examplepracticeapp.ChoreExample.model.Chore
 
 class ChoreListAdapter(private val list: ArrayList<Chore>, private val context: Context) :
         RecyclerView.Adapter<ChoreListAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
-        fun bindItem(chore:Chore){
+        fun bindItem(chore: Chore){
             var choreName: TextView = itemView.findViewById(R.id.listChoreName)
             var assignedBy: TextView = itemView.findViewById(R.id.listAssignedBy)
             var assignedTo: TextView = itemView.findViewById(R.id.listAssignedTo)
@@ -141,7 +140,7 @@ class ChoreListAdapter(private val list: ArrayList<Chore>, private val context: 
         holder.bindItem(list[position])
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.chore_row, parent, false)
         return ViewHolder(view)
     }

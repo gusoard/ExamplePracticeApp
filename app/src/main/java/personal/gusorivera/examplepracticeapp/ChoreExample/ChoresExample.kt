@@ -1,17 +1,15 @@
-package personal.gusorivera.examplepracticeapp
+package personal.gusorivera.examplepracticeapp.ChoreExample
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_chores_example.*
-import personal.gusorivera.examplepracticeapp.data.ChoresDatabaseHandler
-import personal.gusorivera.examplepracticeapp.model.Chore
+import personal.gusorivera.examplepracticeapp.R
+import personal.gusorivera.examplepracticeapp.ChoreExample.data.ChoresDatabaseHandler
+import personal.gusorivera.examplepracticeapp.ChoreExample.model.Chore
 
 /**
  * Hace referencia al ejemplo de ChoresExample

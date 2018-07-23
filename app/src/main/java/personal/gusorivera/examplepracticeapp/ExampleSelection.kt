@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_example_selection.*
+import personal.gusorivera.examplepracticeapp.ChoreExample.ChoresExample
+import personal.gusorivera.examplepracticeapp.RecyclerViewExample.RecycleViewExample
 
 /**
  * Proyecto basado en actividades del curso de Paulo Dichone de Udemy: Kotlin Android Development Masterclass

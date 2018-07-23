@@ -1,18 +1,17 @@
-package personal.gusorivera.examplepracticeapp
+package personal.gusorivera.examplepracticeapp.RecyclerViewExample
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_recycle_view_example.*
-import personal.gusorivera.examplepracticeapp.data.PersonListAdapter
-import personal.gusorivera.examplepracticeapp.model.Person
+import personal.gusorivera.examplepracticeapp.R
+import personal.gusorivera.examplepracticeapp.RecyclerViewExample.data.PersonListAdapter
+import personal.gusorivera.examplepracticeapp.RecyclerViewExample.model.Person
 
 class RecycleViewExample : AppCompatActivity() {
 
-    private var adapter:PersonListAdapter? = null
+    private var adapter: PersonListAdapter? = null
     private var personList: ArrayList<Person>? = null
     private var layoutManager: RecyclerView.LayoutManager? = null
 

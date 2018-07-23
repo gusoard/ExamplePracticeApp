@@ -19,7 +19,7 @@ class SimpleListViewExample : AppCompatActivity() {
         // También puede ser un Array<String> = arrayOf(String1, string2, string3....) de tamaño fijo.
 
         var namesArray: ArrayList<String> = arrayListOf()
-        for (i in 0..9){
+        for (i in 0..20){
             namesArray.add("Persona: " + (i+1))
         }
         var namesAdapter: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_list_item_1, namesArray)

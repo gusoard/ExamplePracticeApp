@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp
+package personal.gusorivera.examplepracticeapp.ChoreExample
 
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
@@ -12,8 +12,9 @@ import android.view.MenuItem
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_chores_list.*
 import kotlinx.android.synthetic.main.popup_chore.view.*
-import personal.gusorivera.examplepracticeapp.data.ChoreListAdapter
-import personal.gusorivera.examplepracticeapp.model.Chore
+import personal.gusorivera.examplepracticeapp.R
+import personal.gusorivera.examplepracticeapp.ChoreExample.data.ChoreListAdapter
+import personal.gusorivera.examplepracticeapp.ChoreExample.model.Chore
 import java.util.*
 
 class ChoresList : AppCompatActivity() {
@@ -71,7 +72,7 @@ class ChoresList : AppCompatActivity() {
             if (!TextUtils.isEmpty(choreName.text.toString())
                     && !TextUtils.isEmpty(assignedBy.text.toString())
                     && !TextUtils.isEmpty(assignedTo.text.toString())){
-                var newChore:Chore = Chore()
+                var newChore: Chore = Chore()
 
                 newChore.choreName = choreName.text.toString()
                 newChore.assignedBy = assignedBy.text.toString()
