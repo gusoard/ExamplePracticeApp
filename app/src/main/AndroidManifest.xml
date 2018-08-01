@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="personal.gusorivera.examplepracticeapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,9 +22,12 @@
         <activity android:name=".SimpleListViewExample" />
         <activity android:name=".SharedPrefsExample" />
         <activity android:name=".ChoreExample.ChoresExample" />
-        <activity android:name=".ui.ChoresList" />
-        <activity android:name=".ui.ChoresListExample" />
-        <activity android:name=".ChoreExample.ChoresList"></activity>
+        <activity android:name=".ChoreExample.ChoresList" />
+        <activity android:name=".VolleyJsonExample.VolleyJsonExample" />
+        <activity
+            android:name=".VolleyJsonExample.VolleyTabExample"
+            android:label="@string/title_activity_volley_tab_example"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

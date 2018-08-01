@@ -7,6 +7,7 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_example_selection.*
 import personal.gusorivera.examplepracticeapp.ChoreExample.ChoresExample
 import personal.gusorivera.examplepracticeapp.RecyclerViewExample.RecycleViewExample
+import personal.gusorivera.examplepracticeapp.VolleyJsonExample.VolleyJsonExample
 
 /**
  * Proyecto basado en actividades del curso de Paulo Dichone de Udemy: Kotlin Android Development Masterclass
@@ -36,6 +37,10 @@ class ExampleSelection : AppCompatActivity(), View.OnClickListener {
             R.id.btnChoresDatabase -> {
                 intentExample = Intent(this, ChoresExample::class.java)
             }
+            R.id.btnVolleyJsonExample -> {
+                intentExample = Intent(this, VolleyJsonExample::class.java)
+            }
+        // IMPORTANTE: Cada boton que se agregue, se debe asignar el click listener
         }
         if (intentExample != null){
             startActivity(intentExample)
@@ -50,5 +55,6 @@ class ExampleSelection : AppCompatActivity(), View.OnClickListener {
         btnRecycleView.setOnClickListener(this)
         btnSharedPrefs.setOnClickListener(this)
         btnChoresDatabase.setOnClickListener(this)
+        btnVolleyJsonExample.setOnClickListener(this)
     }
 }

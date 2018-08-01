@@ -8,4 +8,15 @@
     <string name="assignedBy">Assigned by…</string>
     <string name="txtBotonChoresDatabaseExample">Chores Database Example</string>
     <string name="menu_title_add_chore">Add Chore</string>
+    <string name="txtBotonVolleyJsonExample">Volley Json Example</string>
+    <string name="title_activity_volley_tab_example">VolleyTabExample</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="title_activity_prueba">prueba</string>
 </resources>
