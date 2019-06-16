@@ -2,49 +2,60 @@ package personal.gusorivera.examplepracticeapp.VolleyJsonExample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.ViewPager
+import kotlinx.android.synthetic.main.activity_volley_tab_example.*
 import personal.gusorivera.examplepracticeapp.R
+import personal.gusorivera.examplepracticeapp.VolleyJsonExample.Fragments.FragmentJsonArray
+import personal.gusorivera.examplepracticeapp.VolleyJsonExample.Fragments.FragmentJsonObject
+import personal.gusorivera.examplepracticeapp.VolleyJsonExample.Fragments.FragmentJsonString
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 class VolleyTabExample : AppCompatActivity() {
 
-
-    lateinit var mSectionPageAdapter : SectionsPagerAdapter
-    lateinit var mViewPager : ViewPager
+    var fragmentList : HashMap<String, Fragment> = hashMapOf()
+    var titleList : ArrayList<String> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_volley_tab_example)
-
-
+        setupFragments()
+        setupViewPager()
     }
 
-    fun setupViewPager(viewPager : ViewPager){
-        val adapter : SectionsPagerAdapter = SectionsPagerAdapter(supportFragmentManager)
-
+    private fun setupFragments() {
+        fragmentList["JsonString"] = FragmentJsonString.newInstance()
+        fragmentList["JsonArray"] = FragmentJsonArray.newInstance()
+        fragmentList["JsonObject"] = FragmentJsonObject.newInstance()
     }
 
+    private fun setupViewPager(){
+        var adapter = SectionsPagerAdapter(supportFragmentManager)
+        volleyViewPager.adapter = adapter
+        volleyViewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(volleyTabLayout))
+        volleyTabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                volleyViewPager.currentItem = tab!!.position
+            }
+        })
+
+        for (k in fragmentList.keys){
+            volleyTabLayout.addTab(volleyTabLayout.newTab().setText(k))
+            adapter.addFragment(fragmentList[k]!!, k)
+        }
+
+        adapter.notifyDataSetChanged()
+    }
 }
 
 
-class SectionsPagerAdapter(fm: FragmentManager , private val mFragmentList: ArrayList<Fragment> = arrayListOf() , private val mFragmentTitleList: ArrayList<String> = arrayListOf()) : FragmentPagerAdapter(fm) {
-
-    fun addFragment(fragment : Fragment, fragmentTitle : String){
-        mFragmentList.add(fragment)
-        mFragmentTitleList.add(fragmentTitle)
-    }
-
-    override fun getPageTitle(position: Int): CharSequence? {
-        return mFragmentTitleList.get(position)
-    }
-
-    override fun getItem(position: Int): Fragment {
-        return mFragmentList.get(position)
-    }
-
-    override fun getCount(): Int {
-        return mFragmentList.size
-    }
-}

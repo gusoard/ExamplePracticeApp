@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_example_selection.*
 import personal.gusorivera.examplepracticeapp.ChoreExample.ChoresExample
 import personal.gusorivera.examplepracticeapp.RecyclerViewExample.RecycleViewExample
 import personal.gusorivera.examplepracticeapp.VolleyJsonExample.VolleyJsonExample
+import personal.gusorivera.examplepracticeapp.VolleyJsonExample.VolleyTabExample
 
 /**
  * Proyecto basado en actividades del curso de Paulo Dichone de Udemy: Kotlin Android Development Masterclass
@@ -38,7 +39,8 @@ class ExampleSelection : AppCompatActivity(), View.OnClickListener {
                 intentExample = Intent(this, ChoresExample::class.java)
             }
             R.id.btnVolleyJsonExample -> {
-                intentExample = Intent(this, VolleyJsonExample::class.java)
+                // intentExample = Intent(this, VolleyJsonExample::class.java)
+                intentExample = Intent(this, VolleyTabExample::class.java)
             }
         // IMPORTANTE: Cada boton que se agregue, se debe asignar el click listener
         }
