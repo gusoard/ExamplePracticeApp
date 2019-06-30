@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.VolleyJsonExample.Fragments
+package personal.gusorivera.examplepracticeapp.volleyexample.Fragments
 
 import android.content.Context
 import android.net.Uri

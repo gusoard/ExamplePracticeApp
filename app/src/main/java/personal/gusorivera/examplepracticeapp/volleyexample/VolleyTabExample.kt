@@ -1,16 +1,14 @@
-package personal.gusorivera.examplepracticeapp.VolleyJsonExample
+package personal.gusorivera.examplepracticeapp.volleyexample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.app.Fragment
-import android.support.v4.view.ViewPager
 import kotlinx.android.synthetic.main.activity_volley_tab_example.*
 import personal.gusorivera.examplepracticeapp.R
-import personal.gusorivera.examplepracticeapp.VolleyJsonExample.Fragments.FragmentJsonArray
-import personal.gusorivera.examplepracticeapp.VolleyJsonExample.Fragments.FragmentJsonObject
-import personal.gusorivera.examplepracticeapp.VolleyJsonExample.Fragments.FragmentJsonString
-import java.util.*
+import personal.gusorivera.examplepracticeapp.volleyexample.Fragments.FragmentJsonArray
+import personal.gusorivera.examplepracticeapp.volleyexample.Fragments.FragmentJsonObject
+import personal.gusorivera.examplepracticeapp.volleyexample.Fragments.FragmentJsonString
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 

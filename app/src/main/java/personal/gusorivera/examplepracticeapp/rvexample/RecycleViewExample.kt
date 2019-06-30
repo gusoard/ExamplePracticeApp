@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.RecyclerViewExample
+package personal.gusorivera.examplepracticeapp.rvexample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_recycle_view_example.*
 import personal.gusorivera.examplepracticeapp.R
-import personal.gusorivera.examplepracticeapp.RecyclerViewExample.data.PersonListAdapter
-import personal.gusorivera.examplepracticeapp.RecyclerViewExample.model.Person
+import personal.gusorivera.examplepracticeapp.rvexample.data.PersonListAdapter
+import personal.gusorivera.examplepracticeapp.rvexample.model.Person
 
 class RecycleViewExample : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.VolleyJsonExample
+package personal.gusorivera.examplepracticeapp.volleyexample
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +15,6 @@ import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 import personal.gusorivera.examplepracticeapp.R
-import java.io.Console
 
 class VolleyJsonExample : AppCompatActivity() {
 

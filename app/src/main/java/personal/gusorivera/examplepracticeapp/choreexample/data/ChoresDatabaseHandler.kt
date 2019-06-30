@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.ChoreExample.data
+package personal.gusorivera.examplepracticeapp.choreexample.data
 
 import android.content.ContentValues
 import android.content.Context
@@ -6,7 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
-import personal.gusorivera.examplepracticeapp.ChoreExample.model.*
+import personal.gusorivera.examplepracticeapp.choreexample.model.*
 
 /**
  * Hace referencia al ejemplo de ChoresExample

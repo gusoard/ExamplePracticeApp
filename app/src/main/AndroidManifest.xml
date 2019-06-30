@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="personal.gusorivera.examplepracticeapp">
-
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,24 +10,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".motexample.controller.AppController"
         android:theme="@style/AppTheme">
         <activity android:name=".ExampleSelection">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecyclerViewExample.RecycleViewExample" />
+        <activity android:name=".rvexample.RecycleViewExample" />
         <activity android:name=".SimpleListViewExample" />
         <activity android:name=".SharedPrefsExample" />
-        <activity android:name=".ChoreExample.ChoresExample" />
-        <activity android:name=".ChoreExample.ChoresList" />
-        <activity android:name=".VolleyJsonExample.VolleyJsonExample" />
+        <activity android:name=".choreexample.ChoresExample" />
+        <activity android:name=".choreexample.ChoresList" />
+        <activity android:name=".volleyexample.VolleyJsonExample" />
         <activity
-            android:name=".VolleyJsonExample.VolleyTabExample"
+            android:name=".volleyexample.VolleyTabExample"
             android:label="@string/title_activity_volley_tab_example"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".motexample.MotivationalMainActivity"
+            android:label="Motivational View!"
+            android:theme="@style/MotivationalExampleTheme"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

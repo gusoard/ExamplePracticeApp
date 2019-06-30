@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.ChoreExample
+package personal.gusorivera.examplepracticeapp.choreexample
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -8,8 +8,8 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_chores_example.*
 import personal.gusorivera.examplepracticeapp.R
-import personal.gusorivera.examplepracticeapp.ChoreExample.data.ChoresDatabaseHandler
-import personal.gusorivera.examplepracticeapp.ChoreExample.model.Chore
+import personal.gusorivera.examplepracticeapp.choreexample.data.ChoresDatabaseHandler
+import personal.gusorivera.examplepracticeapp.choreexample.model.Chore
 
 /**
  * Hace referencia al ejemplo de ChoresExample

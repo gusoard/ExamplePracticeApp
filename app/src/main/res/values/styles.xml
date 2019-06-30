@@ -17,4 +17,10 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="MotivationalExampleTheme" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">#464649</item>
+        <item name="colorPrimaryDark">#515153</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+
 </resources>

@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.ChoreExample.model
+package personal.gusorivera.examplepracticeapp.choreexample.model
 
 /**
  * Hace referencia al ejemplo de ChoresExample

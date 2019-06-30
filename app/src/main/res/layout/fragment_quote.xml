@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".motexample.QuoteFragment">
+
+   <android.support.v7.widget.CardView
+       android:layout_width="350dp"
+       android:layout_height="210dp"
+       android:id="@+id/cvQuoteFragment"
+       app:cardBackgroundColor="@color/colorPrimaryDarkFragments"
+       android:layout_centerHorizontal="true"
+       android:layout_centerVertical="true"
+       app:cardElevation="12dp">
+
+       <TextView
+           android:id="@+id/txtQuote"
+           android:padding="5dp"
+           android:text="@string/app_name"
+           android:textAlignment="center"
+           android:textStyle="italic"
+           android:fontFamily="@font/doppio_one"
+           android:layout_gravity="center"
+           android:textColor="@android:color/white"
+           android:textSize="18sp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+   </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtByAuthor"
+        android:layout_below="@id/cvQuoteFragment"
+        android:textSize="45sp"
+        android:fontFamily="cursive"
+        android:text="Author"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

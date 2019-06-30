@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.VolleyJsonExample
+package personal.gusorivera.examplepracticeapp.volleyexample
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

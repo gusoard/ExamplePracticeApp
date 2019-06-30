@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.ChoreExample
+package personal.gusorivera.examplepracticeapp.choreexample
 
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
@@ -13,8 +13,8 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_chores_list.*
 import kotlinx.android.synthetic.main.popup_chore.view.*
 import personal.gusorivera.examplepracticeapp.R
-import personal.gusorivera.examplepracticeapp.ChoreExample.data.ChoreListAdapter
-import personal.gusorivera.examplepracticeapp.ChoreExample.model.Chore
+import personal.gusorivera.examplepracticeapp.choreexample.data.ChoreListAdapter
+import personal.gusorivera.examplepracticeapp.choreexample.model.Chore
 import java.util.*
 
 class ChoresList : AppCompatActivity() {

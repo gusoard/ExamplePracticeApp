@@ -5,10 +5,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_example_selection.*
-import personal.gusorivera.examplepracticeapp.ChoreExample.ChoresExample
-import personal.gusorivera.examplepracticeapp.RecyclerViewExample.RecycleViewExample
-import personal.gusorivera.examplepracticeapp.VolleyJsonExample.VolleyJsonExample
-import personal.gusorivera.examplepracticeapp.VolleyJsonExample.VolleyTabExample
+import personal.gusorivera.examplepracticeapp.choreexample.ChoresExample
+import personal.gusorivera.examplepracticeapp.motexample.MotivationalMainActivity
+import personal.gusorivera.examplepracticeapp.rvexample.RecycleViewExample
+import personal.gusorivera.examplepracticeapp.volleyexample.VolleyTabExample
 
 /**
  * Proyecto basado en actividades del curso de Paulo Dichone de Udemy: Kotlin Android Development Masterclass
@@ -39,8 +39,12 @@ class ExampleSelection : AppCompatActivity(), View.OnClickListener {
                 intentExample = Intent(this, ChoresExample::class.java)
             }
             R.id.btnVolleyJsonExample -> {
+                    // intentExample = Intent(this, VolleyJsonExample::class.java)
+                    intentExample = Intent(this, VolleyTabExample::class.java)
+            }
+            R.id.btnMotivationalExample -> {
                 // intentExample = Intent(this, VolleyJsonExample::class.java)
-                intentExample = Intent(this, VolleyTabExample::class.java)
+                intentExample = Intent(this, MotivationalMainActivity::class.java)
             }
         // IMPORTANTE: Cada boton que se agregue, se debe asignar el click listener
         }
@@ -58,5 +62,6 @@ class ExampleSelection : AppCompatActivity(), View.OnClickListener {
         btnSharedPrefs.setOnClickListener(this)
         btnChoresDatabase.setOnClickListener(this)
         btnVolleyJsonExample.setOnClickListener(this)
+        btnMotivationalExample.setOnClickListener(this)
     }
 }

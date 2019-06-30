@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.ChoreExample.data
+package personal.gusorivera.examplepracticeapp.choreexample.data
 
 import android.content.Context
 import android.graphics.Color
@@ -13,7 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.popup_chore.view.*
 import personal.gusorivera.examplepracticeapp.R
-import personal.gusorivera.examplepracticeapp.ChoreExample.model.Chore
+import personal.gusorivera.examplepracticeapp.choreexample.model.Chore
 
 class ChoreListAdapter(private val list: ArrayList<Chore>, private val context: Context) :
         RecyclerView.Adapter<ChoreListAdapter.ViewHolder>() {

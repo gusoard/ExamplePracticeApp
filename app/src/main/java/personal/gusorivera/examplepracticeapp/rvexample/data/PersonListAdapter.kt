@@ -1,4 +1,4 @@
-package personal.gusorivera.examplepracticeapp.RecyclerViewExample.data
+package personal.gusorivera.examplepracticeapp.rvexample.data
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import personal.gusorivera.examplepracticeapp.R
-import personal.gusorivera.examplepracticeapp.RecyclerViewExample.model.Person
+import personal.gusorivera.examplepracticeapp.rvexample.model.Person
 
 /**
  *  list -> The data to be displayed
